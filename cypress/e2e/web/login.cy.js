@@ -9,10 +9,6 @@ describe('Funcionalidade: Login', () => {
         // Ex.: Subir servidor
     });
 
-    beforeEach(() => {
-      cy.visit('login')
-    });
-
 
     after(() => {
         //Fazer algo depois de todos os testes
@@ -28,20 +24,14 @@ describe('Funcionalidade: Login', () => {
     
     it('Deve fazer login com sucesso', () => {
 
-        cy.get('[data-testid="email"]').clear().type('fulano@qa.com')
-        cy.get('[data-testid="senha"]').clear().type('teste')
-        cy.get('[data-testid="entrar"]').click()
-
+        cy.login('fulano@qa.com','teste')
         cy.get('h1').should('contain', 'Bem Vindo')
-
+        
     });
 
     it('Deve validar usuario invalido', () => {
 
-        cy.get('[data-testid="email"]').clear().type('fulan12o@qa.com')
-        cy.get('[data-testid="senha"]').clear().type('teste')
-        cy.get('[data-testid="entrar"]').click()
-
+        cy.login('fulano12@qa.com','teste')
         cy.get('.alert').should('contain', 'Email e/ou senha inválidos')
 
     });
