@@ -24,7 +24,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: nohup npx serverest -y
-    - run: npm install -f
-    - run: npx cypress run
-    - run: npx allure serve allure-results
+    - name: subir servidor do Serverest
+      run: nohup npm run start &
+
+    - name: Instalar dependencias do node
+      run: npm install -f
+
+    - name: Executar os tests
+      run: npm run cypress:report
