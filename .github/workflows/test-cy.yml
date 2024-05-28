@@ -24,7 +24,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: nohup npx serverest
+    - run: nohup npx serverest -y
     - run: npm install -f
     - run: npx cypress run
     - run: npx allure serve allure-results
