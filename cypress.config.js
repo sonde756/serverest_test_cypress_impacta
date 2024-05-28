@@ -10,6 +10,8 @@ module.exports = defineConfig({
       allureCypress(on);
     },
     baseUrl: 'https://front.serverest.dev/', // Base URL for your tests
-    video: true, // Sets video recording specifically for e2e tests (redundant with top-level video: true)
+    video: true, 
+    chromeWebSecurity: false,
+    projectId: "ma1t1v",
   },
 });
