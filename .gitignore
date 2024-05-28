@@ -43,6 +43,7 @@ node_modules/
 jspm_packages/
 videos/
 screenshots/
+allure-results/
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
