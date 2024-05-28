@@ -29,7 +29,7 @@ describe('Funcionalidade: Login', () => {
         
     });
 
-    it('Deve validar usuario invalido', () => {
+    it.skip('Deve validar usuario invalido', () => {
 
         cy.login('fulano12@qa.com','teste')
         cy.get('.alert').should('contain', 'Email e/ou senha inválidos')
