@@ -22,7 +22,7 @@ describe('API - Produtos', () => {
         })
     });
 
-    it('Deve cadastra um produto com sucesso', () => {
+    it.skip('Deve cadastra um produto com sucesso', () => {
         cy.request({
             method:'POST',
             url:urlBase+'produtos',

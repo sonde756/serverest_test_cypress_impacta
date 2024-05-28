@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --browser chrome",
+    "test": "npx cypress run",
     "start": "npx serverest -y",
     "cypress:report": "npx cypress run",
     "allure:report": "npx allure serve allure-results"
